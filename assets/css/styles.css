@@ -605,16 +605,38 @@ img{
 }
 
 .portfolio__content{
-    margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-1-5);
 }
 
-.portfolio__content > .portfolio__img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 535px;
+.flex > img{
+    width: 715px;
     border-radius: .5rem;
-    margin-bottom: var(--mb-0-25);
+}
+.portfolio__content .flex{
+    display: grid;
+    gap: 1.1rem;
+}
+.flex .grid{
+    margin-bottom: var(--mb-1-5);
+}
+
+ .flex a{
+    color: var(--first-color-alt);
+    font-size: 1rem;
+    transition: .3s;
+}
+.flex a:hover{
+    color: var(--text-color-);
+}
+
+
+.flex .grid img{
+    width: 520px;
+    height: auto;
+}
+.flex p{
+    color: var(--text-color-);
+    text-align: center;
 }
 
 /* =================== PROJECT IN MIND ================== */
@@ -865,8 +887,21 @@ img{
     .services__modal{
         padding: 0 .5rem;
     }
-    .project__img{
-        width: 200px;
+    .portfolio__content .flex{
+        display: grid;
+        gap: .25rem;
+    }
+    .flex .grid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex .grid img{
+        margin-bottom: var(--mb-2-5);
+        object-fit: cover;
+    }
+    .flex .grid p{
+        margin-bottom: var(--mb-1);
     }
     .testimonial__data,
     .testimonial__header{
@@ -910,6 +945,37 @@ img{
     .contact__container,
     .footer__container{
         grid-template-columns: repeat(2,1fr);
+    }
+    .portfolio .section{
+        overflow: hidden;
+    }
+
+    .portfolio__content{
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .flex .grid{
+        margin-bottom: var(--mb-0-75);
+    }
+
+    .portfolio__content .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .flex img{
+        width: 310px;
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .flex a{
+        color: var(--first-color-alt);
+        font-size: 1.25rem;
+        transition: .3s;
+    }
+    .flex p{
+        margin-bottom: var(--mb-1);
     }
     .qualification__sections{
         display: grid;
@@ -1033,30 +1099,26 @@ img{
         overflow: hidden;
     }
 
-    .portfolio__content .grid{
-        padding: 0 1.5rem;
-        margin-bottom: var(--mb-1);
+
+    .flex{
+        margin-bottom: var(--mb-0-75);
+    }
+
+    .portfolio__content .flex{
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
     }
-    
-    .portfolio__content > .portfolio__img{
-        width: 235px;
-        border-radius: .5rem;
-        justify-self: center;
-        margin-bottom: var(--mb-0-25);
-    }
-    
-    .portfolio__content .portfolio__description{
-        justify-content: center;
-        text-align: center;
-        margin-right: var(--mb-2-5) ;
-        padding: auto;
+    .flex img{
+        width: 380px;
         margin-bottom: var(--mb-1-5);
-        font-size: var(--font-medium);
-        font-weight: 300;
-        color: var(--title-color);
+    }
+
+    .flex a{
+        color: var(--first-color-alt);
+        font-size: 1rem;
+        transition: .3s;
     }
 
     .project{
@@ -1137,25 +1199,21 @@ img{
     }
 
     .portfolio__content{
-        column-gap: 5rem;
+        display: grid;
+        grid-template-columns: max-content;
+        gap: 1rem;
     }
-    .portfolio__content .portfolio__description{
-        justify-content: center;
-        text-align: start;
-        margin-right: var(--mb-1-5) ;
-        padding: .3rem .1rem;
-        margin-bottom: var(--mb-2);
-        font-size: var(--font-medium);
-        font-weight: 300;
-        color: var(--title-color);
+    .portfolio__content .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .portfolio__content > .portfolio__img{
-        width: 465px;
-        border-radius: .5rem;
-        justify-self: flex-end;
-        margin-bottom: var(--mb-1-5);
+    .flex img{
+        width: 550px;
     }
+    
 
     .contact__form{
         width: 460px;
